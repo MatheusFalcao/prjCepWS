@@ -1,5 +1,6 @@
 package cliente;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Programa {
@@ -12,7 +13,10 @@ public class Programa {
 		System.out.println("Digite o CEP que deseja consultar :");
 		leia = new Scanner(System.in);
 		
-		cep.consultaCep(leia.nextLine());
+		List<String> resposta = cep.consultaCep(leia.nextLine());
+		
+		System.out.println(" ");
+		System.out.println(resposta.toString());
 
 	}
 
